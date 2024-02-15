@@ -1,0 +1,193 @@
+body {
+    background-color: black;
+  }
+  
+  a,
+  p,
+  h2,
+  h3,
+  h1 {
+    color: white;
+  }
+
+  .quizPage {
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+.quizBothSides {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    background-image: url("https://www.iwantwallpaper.co.uk/images/harry-potter-mischief-management-parchment-themed-glow-in-the-dark-wallpaper-p6354-17836_image.jpg");
+    padding: 30px;
+    border-radius: 15px;
+  }
+  
+  .initQuiz {
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    background-image: url(https://www.alucare.fr/wp-content/uploads/2023/08/Harry-Potter.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .questionSide {
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    background-image: url(https://www.alucare.fr/wp-content/uploads/2023/08/Harry-Potter.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .questionNumber {
+    margin: 5px 10px;
+    padding: 10px;
+    background-color: #3339;
+    border-radius: 5px;
+  }
+  
+  .question {
+    margin: 5px 10px;
+    padding: 10px;
+    background-color: #3339;
+    border-radius: 5px;
+  }
+  
+  .answerList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  
+  .answerOption {
+    cursor: pointer;
+    padding: 20px 35px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+  }
+  
+  .takeQuizButton {
+    cursor: pointer;
+    padding: 20px 35px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    margin-bottom: 80px;
+  }
+  
+  @media screen and (min-width: 767px) {
+    .initSubjects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .quizBothSides {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+    }
+    .questionSide {
+      margin-bottom: 0;
+    }
+  
+    .answerList {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .jokeBlock > h2 {
+      font-size: 99px;
+    }
+  
+    .jokeBlock > h4 {
+      font-size: 36px;
+    }
+  }
+  
+  @media screen and (min-width: 1023px) {
+    h1 {
+      margin-top: 50px;
+    }
+  
+    .initSubjects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+  
+    .initQuiz {
+      width: 50%;
+    }
+  
+   
+  
+    .questionSide {
+      height: 400px;
+    }
+  
+    .questionNumber {
+      font-size: 20px;
+    }
+  
+    .question {
+      font-size: 24px;
+    }
+  
+    .answerList {
+      justify-content: center;
+      gap: 30px;
+    }
+  
+    .answerOption {
+      font-size: 20px;
+    }
+  
+  }
+  
+  @media screen and (min-width: 1440px) {
+    h1 {
+      font-size: 48px;
+    }
+    .answerOption {
+      font-size: 28px;
+    }
+    .questionNumber {
+      font-size: 28px;
+    }
+    .question {
+      font-size: 28px;
+    }
+  
+    .questionSide {
+      height: 500px;
+    }
+  }
+  

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="render.js" defer></script>
+    <script src="main.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fjalla+One&family=Inter:wght@300;400;500;600;700&family=Open+Sans&family=Passion+One&family=Permanent+Marker&display=swap");
+    </style>
+
+    <title>Harry Potter Quiz</title>
+  </head>
+  <body>
+    <section id="quiz" class="quizPage">
+      <h1>Harry Potter Quiz</h1>
+      <p id="quizHeadlineText">
+        Answer 10 questions to determine wether you're a TRUE Harry Potter fan
+      </p>
+      <div class="initQuiz">
+        <p id="initQuizTopText" class="questionNumber">
+          Welcome to Harry Potter Quiz
+        </p>
+        <h4 id="initQuizBottomText" class="question">
+          To start simply press the button below
+        </h4>
+      </div>
+      <div id="quizSection" class="quizSection" style="display: none">
+        <div class="quizBothSides">
+          <div class="questionSide">
+            <p id="questionNumber" class="questionNumber">
+              Welcome to the Harry Potter quiz!
+            </p>
+            <h4 id="quizQuestion" class="question">
+              To start simply press the button below
+            </h4>
+          </div>
+          <div class="answerList">
+            <button
+              onclick="checkAnswer(questions[currentQuestion].options[0])"
+              id="option1"
+              class="answerOption"
+            >
+              Option 1
+            </button>
+            <button
+              onclick="checkAnswer(questions[currentQuestion].options[1])"
+              id="option2"
+              class="answerOption"
+            >
+              Option 2
+            </button>
+            <button
+              onclick="checkAnswer(questions[currentQuestion].options[2])"
+              id="option3"
+              class="answerOption"
+            >
+              Option 3
+            </button>
+            <button
+              onclick="checkAnswer(questions[currentQuestion].options[3])"
+              id="option4"
+              class="answerOption"
+            >
+              Option 4
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button
+          onclick="displayNextQuestion([0])"
+          id="tryAgain"
+          class="takeQuizButton"
+        >
+          Try again
+        </button>
+        <h2 id="showResults" style="display: none">belekas</h2>
+      </div>
+      <button
+        id="startBtn"
+        class="takeQuizButton"
+        onclick="displayNextQuestion()"
+      >
+        Start the Quiz!!
+      </button>
+    </section>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+      const firebaseConfig = {
+        apiKey: import.meta.env.VITE_apiKey,
+        authDomain: import.meta.env.VITE_authDomain,
+        projectId: import.meta.env.VITE_projectId,
+        storageBucket: import.meta.env.VITE_storageBucket,
+        messagingSenderId: import.meta.env.VITE_messagingSenderId,
+        appId: import.meta.env.VITE_appId,
+        measurementId: import.meta.env.VITE_measurementId,
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>
